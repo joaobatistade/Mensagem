@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>Mensagem</title>
+	<h:outputStylesheet library="css" name="estilo.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<h:messages style="color:red;margin:8px;"/>
+	<h1 align="center">Cadastre sua Mensagem</h1>
+	<h:messages style="color:red;margin:8px;"/>
+   	<h:form>
+	   	<div id="corpo" align="center">
+	   		<fieldset style="width: 300px;"> 
+				<h:panelGrid columns="2"> 
+					
+					<h:outputLabel value="Nome:" />
+					<h:inputText value="#{mensagemController.nome}"/>
+					
+					<h:outputLabel value="e-mail:"/>			
+					<h:inputText value="#{mensagemController.email}"/>
+					
+					<h:outputLabel value="Mensagem:"/>
+					<h:inputTextarea row = "10" col = "10" id="mensagem" value="#{mensagemController.msg}"/>
+					<div align="left">
+						<h:commandButton  value = "Envia sua Mensagem" action="#{mensagemController.mensagem()}"/> 
+					</div>
+				</h:panelGrid>
+			</fieldset>
+		</div>
+	</h:form>
+</h:body>
+</html>

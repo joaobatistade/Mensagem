@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+body{
+	font-family: Verdana, Arial, Hlvetica, sans-serif;
+	font-size: 14px;
+	background: #00ff40
+}
+
+header{
+    color: white;
+    text-align: center;
+}
